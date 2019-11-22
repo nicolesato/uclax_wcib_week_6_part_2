@@ -1,26 +1,157 @@
 <!doctype html>
 <html class="" lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-    <title>Week 6, Part 1</title>
+  <title>Nicole Sato - Boba Gals</title>
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UCLAx WCIB Week 6 Part 2 Assignment">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-  <body>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-    <h1>Week 6, Part 1</h1>
+</head>
 
-	</body>
+<body>
+  <!-- Navbar -->
+  <nav class="site-header sticky-top py-1 bg-light navbar-custom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block navbar-item bobagals" href="#">&#10032; Boba Gals &#10032;</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Locations</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Menu</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">About</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Catering</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Shop</a>
+    </div>
+  </nav>
 
-</html>
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light header-custom">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1>We &#10084; boba.</h1>
+      <p class="lead font-weight-normal intro-text">And we heart you too. Join us for our <span class="grandopening">grand opening party!</span> Click the link below for deets.</p>
+      <button type="button" class="btn btn-outline-danger btn-custom" data-toggle="modal" data-target="#exampleModalCenter">&#10032; a bobalicious invite &#10032;</button>
+    </div>
+    <div class="product-device product-deive-2 d-none d-md-block">
+      <img class="bobapics" src="images/boba2.jpg" alt="boba"></div>
+      <div class="product-device product-device-2 d-none d-md-block">
+        <img class="bobapics" src="images/boba1.jpg" alt="boba"></div>
+      </div>
+
+      <!-- Modal 1 -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">It's a #bobaparty. And you're invited.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Mark your calendars! To celebrate our store's grand opening, the Boba Gals are throwing a boba party! There will be music, prizes, photo pop-ups and of course, boba.</p>
+              <p class="bobapartydate">123 Boba St. Honolulu, HI 99999<br>Sunday, November 23<br>4pm-6pm</p>
+
+              <p>RSVP with your name and favorite milk tea flavor to be entered into the raffle! Three Winners will recieve free drinks for themselves and one friend.</p>
+              <div class="form-group">
+                <label for="rafflename" class="col-form-label rafflename">Name:</label>
+                <input id="rafflename" type="text" class="form-control">
+                <label for="raffleflavor" class="col-form-label raffleflavor">Favorite flavor:</label>
+                <input id="raffleflavor" type="text" class="form-control">
+              </div>
+              <div class="randomcoupon">
+                <p>P.S. Wanna score other great boba prizes? Submit and also recieve a coupon code. You could get up to 50% off, a complimentary souvenir jar, or other fun prizes!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-custom randomize" data-toggle="modal" data-dismiss="modal" data-target="#secondmodal">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div class="modal fade" id="secondmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle2">We can't wait to see you there!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="randomcouponfx">
+                <p>And you scored...</p>
+                <p class="yourcoupon"></p>
+                <p>Your coupon code is <span class="yourcouponcode"></span>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Us -->
+      <div class="aboutus">
+        <h2>&#10032;</h2>
+        <h3>Our Story</h3>
+        <p>We, Kristen and Nicole (the og Boba Gals), have a love affair with all things boba and milk tea. In 2018, we decided to travel the world to taste boba from all corners of the earth.
+          Everywhere we went, we learned something new - like the nuances of brewing tea or how to make the perfect boba texture. In 2019, we decided we had to have our own shop: a place where boba queens from near and far could gather to chat and sip.
+          And thus, Boba Gals was born! Now, we are so glad to share it with you.</p>
+        </div>
+
+        <!-- More content boxes -->
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+
+          <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+              <h2 class="display-5">@boba.gals</h2>
+              <p class="lead">Follow us on instagram for the latest updates.</p>
+            </div>
+              <img class="squarepics" src="images/boba3.jpg" alt="boba">
+          </div>
+
+          <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+              <h2 class="display-5">Our boba be poppin'</h2>
+              <p class="lead">Our housemade boba is made fresh daily.</p>
+            </div>
+              <img class="squarepics" src="images/boba4.jpg" alt="boba">
+          </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+
+          <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+              <h2 class="display-5">Flavor of the month:</h2>
+              <p class="lead">thai tea + honeysuckle</p>
+            </div>
+              <img class="squarepics" src="images/boba5.jpg" alt="boba">
+          </div>
+
+          <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+              <h2 class="display-5">Throwing a #bobaparty?</h2>
+              <p class="lead">Check out our catering options.</p>
+            </div>
+              <img class="squarepics" src="images/boba6.jpg" alt="boba">
+          </div>
+        </div>
+        <footer class="blog-footer">
+          <p>Boba Gals, Inc. | 123 Boba St. Honolulu, HI 99999 | Design by Boba Gals &copy; 2019</p>
+          <p>
+            <a href="#">Back to top</a>
+          </p>
+        </footer>
+        <script src="js/scripts.js"></script>
+      </body>
+
+      </html>
