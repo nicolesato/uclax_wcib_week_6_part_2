@@ -66,12 +66,70 @@ body {
     font-weight: 700; }
   body .randomize {
     background-color: white; }
-  body .rafflename, body .raffleflavor {
+  body .rafflefirstname, body .rafflelastname, body .raffleflavor {
     font-weight: 700; }
-  body footer {
-    color: #baabde !important; }
-    body footer a, body footer a:hover {
-      color: #baabde; }
+  body footer a, body footer a:hover {
+    color: #baabde; }
+
+.location {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding-top: 3rem; }
+  .location h3 {
+    font-weight: 900;
+    margin-bottom: 1.5rem; }
+  .location h4 {
+    font-weight: 900;
+    font-size: 1rem; }
+
+.googlemaps {
+  width: 100%;
+  height: 400px;
+  padding-right: 1rem;
+  padding-left: 1rem; }
+
+@media (min-width: 768px) {
+  .location {
+    text-align: right; }
+  .googlemaps {
+    padding-top: 3rem;
+    padding-right: 10rem;
+    padding-left: 1rem; } }
+
+.menu {
+  font-family: 'Playfair Display', serif;
+  background-color: #313186;
+  color: white;
+  border-radius: 20px; }
+  .menu h3 {
+    padding-top: 1rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem; }
+  .menu h4 {
+    font-weight: 700;
+    font-size: 1.2rem; }
+  .menu ul {
+    padding: 0; }
+  .menu li {
+    list-style: none; }
+
+@media (max-width: 767px) {
+  .menu {
+    border-radius: 0; } }
+
+@media (max-width: 1060px) {
+  .bobatitle {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 20px; } }
+
+@media (max-width: 767px) {
+  .bobatitle {
+    background-color: #eeebff; } }
+
+.generategif {
+  margin-bottom: 2rem; }
 
 .container {
   max-width: 960px; }
@@ -147,10 +205,9 @@ body {
  */
 .blog-footer {
   padding: 2.5rem 0;
-  color: #999;
+  color: #baabde;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5; }
+  background-color: #eeebff; }
 
 .blog-footer p:last-child {
   margin-bottom: 0; }

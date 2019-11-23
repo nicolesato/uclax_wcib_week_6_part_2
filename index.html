@@ -25,24 +25,26 @@
   <nav class="site-header sticky-top py-1 bg-light navbar-custom">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block navbar-item bobagals" href="#">&#10032; Boba Gals &#10032;</a>
-      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Locations</a>
-      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Menu</a>
-      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">About</a>
-      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Catering</a>
-      <a class="py-2 d-none d-md-inline-block navbar-item" href="#">Shop</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#about-jump">Our Story</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#menu-jump">Menu</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#location-jump">Locations</a>
+      <a class="py-2 d-none d-md-inline-block navbar-item" href="#" data-toggle="modal" data-target="#shopmodal">Shop - <em>coming soon</em></a>
     </div>
   </nav>
 
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light header-custom">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      <h1>We &#10084; boba.</h1>
-      <p class="lead font-weight-normal intro-text">And we heart you too. Join us for our <span class="grandopening">grand opening party!</span> Click the link below for deets.</p>
-      <button type="button" class="btn btn-outline-danger btn-custom" data-toggle="modal" data-target="#exampleModalCenter">&#10032; a bobalicious invite &#10032;</button>
-    </div>
+
     <div class="product-device product-deive-2 d-none d-md-block">
       <img class="bobapics" src="images/boba2.jpg" alt="boba"></div>
       <div class="product-device product-device-2 d-none d-md-block">
         <img class="bobapics" src="images/boba1.jpg" alt="boba"></div>
+
+        <div class="col-md-5 p-lg-5 mx-auto my-5 bobatitle">
+          <h1>We &#10084; boba.</h1>
+          <p class="lead font-weight-normal intro-text">And we heart you too. Join us for our <span class="grandopening">grand opening party!</span> Click the link below for deets.</p>
+          <button type="button" class="btn btn-outline-danger btn-custom" data-toggle="modal" data-target="#exampleModalCenter">&#10032; a bobalicious invite &#10032;</button>
+        </div>
+
       </div>
 
       <!-- Modal 1 -->
@@ -57,13 +59,29 @@
             </div>
             <div class="modal-body">
               <p>Mark your calendars! To celebrate our store's grand opening, the Boba Gals are throwing a boba party! There will be music, prizes, photo pop-ups and of course, boba.</p>
-              <p class="bobapartydate">123 Boba St. Honolulu, HI 99999<br>Sunday, November 23<br>4pm-6pm</p>
+              <p class="bobapartydate">Boba Gals Honolulu<br>123 Boba St. Honolulu, HI 99999<br>Sunday, November 23<br>4pm-6pm</p>
 
               <p>RSVP with your name and favorite milk tea flavor to be entered into the raffle! Three Winners will recieve free drinks for themselves and one friend.</p>
               <div class="form-group">
-                <label for="rafflename" class="col-form-label rafflename">Name:</label>
-                <input id="rafflename" type="text" class="form-control">
-                <label for="raffleflavor" class="col-form-label raffleflavor">Favorite flavor:</label>
+                <form class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="rafflefirstname" for="firstName">First name</label>
+                      <input type="text" class="form-control" id="rafflefirstname" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid first name is required.
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="rafflelastname" for="lastName">Last name</label>
+                      <input type="text" class="form-control" id="rafflelastname" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <label for="raffleflavor" class="col-form-label raffleflavor">Favorite flavor</label>
                 <input id="raffleflavor" type="text" class="form-control">
               </div>
               <div class="randomcoupon">
@@ -82,7 +100,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle2">We can't wait to see you there!</h5>
+              <h5 class="modal-title addname" id="exampleModalCenterTitle2"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -98,8 +116,27 @@
         </div>
       </div>
 
+      <!-- Modal 3 (Shop coming soon) -->
+      <div class="modal fade" id="shopmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title addname" id="exampleModalCenterTitle3">Stay tuned for Boba Gals gear.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>In the mean time, enjoy a random boba gif.</p>
+                <button type="button" class="btn btn-outline-danger btn-custom generategif">&#10032; random boba gif generator &#10032;</button>
+                <img id="randombobagif">
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- About Us -->
-      <div class="aboutus">
+      <div id="about-jump" class="aboutus">
         <h2>&#10032;</h2>
         <h3>Our Story</h3>
         <p>We, Kristen and Nicole (the og Boba Gals), have a love affair with all things boba and milk tea. In 2018, we decided to travel the world to taste boba from all corners of the earth.
@@ -115,7 +152,7 @@
               <h2 class="display-5">@boba.gals</h2>
               <p class="lead">Follow us on instagram for the latest updates.</p>
             </div>
-              <img class="squarepics" src="images/boba3.jpg" alt="boba">
+            <img class="squarepics" src="images/boba3.jpg" alt="boba">
           </div>
 
           <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -123,7 +160,7 @@
               <h2 class="display-5">Our boba be poppin'</h2>
               <p class="lead">Our housemade boba is made fresh daily.</p>
             </div>
-              <img class="squarepics" src="images/boba4.jpg" alt="boba">
+            <img class="squarepics" src="images/boba4.jpg" alt="boba">
           </div>
         </div>
 
@@ -134,7 +171,7 @@
               <h2 class="display-5">Flavor of the month:</h2>
               <p class="lead">thai tea + honeysuckle</p>
             </div>
-              <img class="squarepics" src="images/boba5.jpg" alt="boba">
+            <img class="squarepics" src="images/boba5.jpg" alt="boba">
           </div>
 
           <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -142,11 +179,88 @@
               <h2 class="display-5">Throwing a #bobaparty?</h2>
               <p class="lead">Check out our catering options.</p>
             </div>
-              <img class="squarepics" src="images/boba6.jpg" alt="boba">
+            <img class="squarepics" src="images/boba6.jpg" alt="boba">
           </div>
         </div>
+
+<div id="menu-jump" class="container menu text-center">
+      <h3>Menu</h3>
+        <div class="row">
+
+          <div class="col-md-3 mb-3">
+            <h4>LOOSE LEAF TEAS</h4>
+            <ul>
+            <li>classic black</li>
+            <li>jasmine green</li>
+            <li>lychee green</li>
+            <li>coconut green</li>
+            <li>indian chai</li>
+            <li>muscat oolong</li>
+            <li>rose black</li>
+            <li>duke of early gray</li>
+            <li>decaf black</li>
+            <li>lavender black / decaf </li>
+          </ul>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h4>SPECIALTIES</h4>
+            <ul>
+            <li>strawberry jasmine tea fresca</li>
+            <li>strawberry cali-pico</li>
+            <li>strawberry rice milk</li>
+            <li>horchata</li>
+            <li>dirty horchata</li>
+            <li>chocochata</li>
+            <li>thai tea</li>
+            <li>hong kong style</li>
+            <li>black sesame latte</li>
+            <li>matcha latte</li>
+            <li>strawberry matcha latte</li>
+            <li>matchata</li>
+          </ul>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h4>SEASONAL</h4>
+            <ul>
+            <li>ponche</li>
+            <li>black sugar hojicha</li>
+            <li>caramel matcha latte</li>
+            <li>caramel milk tea</li>
+            <li>malted mint chocolate</li>
+            <li>red bean latte</li>
+          </ul>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h4>TOPPINGS</h4>
+            <ul>
+            <li>boba</li>
+            <li>mini boba</li>
+            <li>pop boba</li>
+            <li>almond jelly</li>
+            <li>grass jelly</li>
+            <li>aloe jelly</li>
+            <li>chia seeds</li>
+            <li>egg pudding</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div id="location-jump" class="col-md-4 mb-3 location">
+            <h3>Locations</h3>
+            <h4>HONOLULU</h4>
+            <p>123 Boba St.<br>Honolulu, HI 99999<br>+1 (808) 123-4567</p>
+            <h4>LOS ANGELES</h4>
+            <p>456 Milk Tea Blvd.<br>Los Angeles, CA 99999<br>+1 (310) 123-4567</p>
+          </div>
+          <div class="col-md-8 mb-3">
+<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d386408.17322432576!2d-158.03516465632788!3d21.43624071447275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574483507529!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+        </div>
+
         <footer class="blog-footer">
-          <p>Boba Gals, Inc. | 123 Boba St. Honolulu, HI 99999 | Design by Boba Gals &copy; 2019</p>
+          <p>Boba Gals, Inc. | Design by Boba Gals &copy; 2019</p>
           <p>
             <a href="#">Back to top</a>
           </p>
